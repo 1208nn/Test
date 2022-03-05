@@ -30,7 +30,6 @@
     </style> 
 </head> 
 <body> 
-<div id="header">abcd</div> 
 <div style="margin-top:30px;"> 
 <script type="text/javascript"> 
     //document.write('<div id="nav"></div>'); 
@@ -81,13 +80,10 @@ var nav = document.getElementById('nav');
 var posTop = getElementViewTop(nav); 
 window.addEventListener('scroll',function(event){ 
     var scrollTop = getScroll().top; 
-    var output = document.getElementById('output'); 
-    output.innerHTML = posTop +' '+scrollTop+' '+(posTop-scrollTop); 
     if(posTop>=30 && posTop-scrollTop <= 30)  
         nav.className = 'nav fixed'; 
     else nav.className = 'nav'; 
 },false); 
 </script> 
-<div id="output" style="position:fixed;width:60px;height:60px;right:100px;bottom:100px;background:#DDD">0</div> 
 </body> 
 </html>
